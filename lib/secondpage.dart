@@ -36,9 +36,7 @@ class _SecondPageState extends State<SecondPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   InkWell(
-                    onTap: () {
-                      // ทำอะไรสักอย่างเมื่อกดปุ่ม "Computer Science"
-                    },
+                    onTap: () {},
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(16),
                       child: Container(
@@ -65,9 +63,7 @@ class _SecondPageState extends State<SecondPage> {
                     ),
                   ),
                   InkWell(
-                    onTap: () {
-                      // ทำอะไรสักอย่างเมื่อกดปุ่ม "Information Technology"
-                    },
+                    onTap: () {},
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(16),
                       child: Container(

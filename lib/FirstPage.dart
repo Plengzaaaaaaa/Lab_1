@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'secondpage.dart'; // Import the second page
+import 'secondpage.dart'; // นำเข้าหน้า secondpage
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -20,11 +20,11 @@ class _FirstPageState extends State<FirstPage> {
         title: Text("Login"),
       ),
       body: Center(
-        // const ค่าคงที่
+        // ค่าคงที่
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: SingleChildScrollView(
-            // Add SingleChildScrollView here
+            // เพิ่ม SingleChildScrollView ที่นี่
             child: Column(
               children: [
                 CircleAvatar(
@@ -144,12 +144,28 @@ class _FirstPageState extends State<FirstPage> {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
+                    // เมื่อนำไปหน้าถัดไป
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => SecondPage()),
                     );
                   },
-                  child: Text("NextPage"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue, // สีพื้นหลังของปุ่ม
+                    disabledBackgroundColor: Colors.white, // สีข้อความของปุ่ม
+                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    elevation: 5, // เงาของปุ่ม
+                  ),
+                  child: Text(
+                    "NextPage",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ],
             ),
